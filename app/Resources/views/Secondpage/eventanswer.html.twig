@@ -1,0 +1,91 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+
+        {% block javascripts %}
+            <script src="{{ asset("jquery/jquery-2.2.4.min.js")}}"></script>
+            <script src="{{ asset("js/iziModal.min.js")}}"></script>
+            <script src="{{ asset("js/common.js") }}"></script>
+            <script>                $(document).on('click', '.open-default', function (event) {
+                    event.preventDefault();
+                    $('#modal-default').iziModal('open');
+                });
+                $('#modal-default').iziModal();</script>
+
+        {% endblock %}
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset("css/iziModal.min.css") }}"  />
+            <link rel="stylesheet" href="{{ asset("css/common.css") }}"  />
+        {% endblock %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body>
+        <div>
+            <h1>イベント名　　松本チーム飲み会</h1>
+        </div>
+
+        <div class="respondent">
+            回答者<input type="text">
+        </div>
+
+        <br><br>
+
+
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="5">2018/07/14 19:00~</td>
+                    <td>
+                        <a href="#" class="btn1">〇<i class="far fa-circle"></i></a>
+                    </td>
+                    <td>△</td>
+                    <td>×</td>
+                </tr>
+                <tr>
+                    <td colspan="5">2018/07/14 19:00~</td>
+                    <td><a href="#" class="btn1">〇<i class="far fa-circle"></i></a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="5">2018/07/14 19:00~</td>
+                    <td><a href="#" class="btn1">〇<i class="far fa-circle"></i></a></td>
+                    <td>△</td>
+                    <td>×</td>		
+                </tr>
+                <tr>
+                    <td colspan="5">2018/07/14 19:00~</td>
+                    <td><a href="#" class="btn1">〇<i class="far fa-circle"></i></a></td>
+                    <td>△</td>
+                    <td>×</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br>
+
+
+        <div class="remarks">
+            備考<textarea>土曜日はえぐすぎる</textarea>
+        </div>
+
+        <p>ボタンをクリックするとモーダルが表示されます</p>
+        <button class="open-default button">default</button>
+        <div id="modal-default">
+            <div class="close">
+                <a data-izimodal-close="">×</a>
+            </div>
+            <p>このモーダルはデフォルト設定です</p>
+        </div>
+
+
+
+
+    </body>
+</html>
