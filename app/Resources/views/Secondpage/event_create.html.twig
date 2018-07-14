@@ -1,0 +1,39 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheet %} {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body>
+        <div>
+            <form>
+                <p>イベントタイトル</p>
+                <input type ="text" name = "title" size="40" placeholder="イベントのタイトルを入力してください"><br><br>
+
+                <p>イベント詳細</p>
+                <textarea name ="detail" cols ="50" rows="10" placeholder="イベントの詳細を入力してください"></textarea><br><br>
+
+                <p>必須メンバー</p>
+                <select name="member"　multiple>
+                    <option value="1">松本</option>
+                    <option value="2">宮里</option>
+                    <option value="3">福谷</option>
+                    <option value="4">林</option>
+                </select><br><br>
+
+                <dialog id="dialog">
+                    <p>※入力した内容をリセットします</p>
+                    <input type="reset" value="OK"  onclick="document.getElementById('dialog').close();">
+
+                    <input type="button" value="キャンセル" onclick="document.getElementById('dialog').close();">
+
+                </dialog>
+                <input type="button" value="リセット" onclick="document.getElementById('dialog').show();">
+
+            </form>
+        </div>
+    </body>
+</html>
