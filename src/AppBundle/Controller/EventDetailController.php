@@ -11,7 +11,7 @@ class EventDetailController extends Controller
     /**
      * @Route("/eventDetail/")
      */
-        public function goToCreateEventAction(Request $request)
+        public function goToEventDetailAction(Request $request)
     {
         // replace this example code with whatever you need
         return $this->render('Secondpage/event_detail.html.twig', array(
