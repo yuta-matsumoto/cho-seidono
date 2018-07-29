@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 class EventAnswerController extends Controller
 {
     /**
-     * @Route("/answerEvent/")
+     * @Route("/anserEvent/")
      */
         public function goToAnswerEventAction(Request $request)
     {
