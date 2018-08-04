@@ -1,0 +1,14 @@
+th, td {
+    width:0;
+    text-align:center;
+}
+
+.event_header{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link{
+    margin-top: 40px;
+    text-align: center;
+}

@@ -20,7 +20,7 @@ class EventListController extends Controller
                 'triangle' => '1',
                 'cross' => '0',
                 'un' => '0',
-                'create' => '2018/07/14',
+                'createDate' => '2018/07/14',
             ],
             [
                 'name' => '７月度満田チーム飲み',
@@ -28,7 +28,7 @@ class EventListController extends Controller
                 'triangle' => '4',
                 'cross' => '0',
                 'un' => '0',
-                'create' => '2018/07/01',
+                'createDate' => '2018/07/01',
             ],
             [
                 'name' => '８月度松本チーム飲み',
@@ -36,7 +36,7 @@ class EventListController extends Controller
                 'triangle' => '4',
                 'cross' => '0',
                 'un' => '0',
-                'create' => '2018/07/01',
+                'createDate' => '2018/07/01',
             ],
             [
                 'name' => '８月度満田チーム飲み',
@@ -44,7 +44,7 @@ class EventListController extends Controller
                 'triangle' => '4',
                 'cross' => '0',
                 'un' => '0',
-                'create' => '2018/07/01',
+                'createDate' => '2018/07/01',
             ],
             [
                 'name' => '９月度松本チーム飲み',
@@ -52,7 +52,7 @@ class EventListController extends Controller
                 'triangle' => '4',
                 'cross' => '0',
                 'un' => '0',
-                'create' => '2018/07/01',
+                'createDate' => '2018/07/01',
             ],
         ];
         
