@@ -1,6 +1,7 @@
 th, td {
     width:0;
     text-align:center;
+    max-width: 300px;
 }
 
 .event_header{

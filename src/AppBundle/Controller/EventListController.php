@@ -47,7 +47,7 @@ class EventListController extends Controller
                 'createDate' => '2018/07/01',
             ],
             [
-                'name' => '９月度松本チーム飲み',
+                'name' => 'ああああああああああああああああああaa',
                 'circle' => '0',
                 'triangle' => '4',
                 'cross' => '0',
