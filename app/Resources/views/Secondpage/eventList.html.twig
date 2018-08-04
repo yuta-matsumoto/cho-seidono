@@ -1,0 +1,52 @@
+{# empty Twig template #}
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}EventList{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+<body>
+<div>   
+        {#イベント一覧全て#}
+        <div class="main">
+            
+            {#イベント一覧上部分#}
+            <div class="event_header">
+                <p>イベント一覧</p>
+            </div>
+            
+            {#イベント一覧コンテンツ#}
+            <div class="event_list">
+                
+                <table class="table_list">
+                    <thead>
+                        <tr>
+                            <th>イベント名</th>
+                            <th>○</th>
+                            <th>△</th>
+                            <th>×</th>
+                            <th>未</th>
+                            <th>作成日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for event in eventList %}
+                        <tr>
+                            <td>{{event.name}}</td>
+                            <td>{{event.circle}}</td>
+                            <td>{{event.triangle}}</td>
+                            <td>{{event.cross}}</td>
+                            <td>{{event.un}}</td>
+                            <td>{{event.create}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+</div>
+</body>
+</html>

@@ -18,17 +18,5 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ));
     }
-    /**
-     * @Route("/createEvent/")
-     */
-        public function goToCreateEventAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('Secondpage/EventCreate.html.twig', array(
-            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-        ));
-    }
-
-
-
+   
 }

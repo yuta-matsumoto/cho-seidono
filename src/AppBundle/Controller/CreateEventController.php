@@ -6,12 +6,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+class CreateEventController extends Controller
 {
     /**
-     * @Route("/mekaEvent/")
+     * @Route("/createEvent/")
      */
-    public function indexAction(Request $request)
+    public function goToCreateEventAction(Request $request)
     {
         // replace this example code with whatever you need
         //福谷修正
