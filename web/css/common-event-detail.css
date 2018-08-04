@@ -1,26 +1,10 @@
+body {
+    background-color: black;
+}
 .container{
     width: 450px;
     margin: 0 auto;
 }
-.block{
-    display: table;
-    margin: 20px 0;
-}
-.block > .block__element,
-.block > a{
-    display: table-cell;
-    width: 130px;
-    padding: 9px;
-    border: 1px solid #666;
-}
-.block > a:hover{
-    background: #dd3;
-}
-.br::before {
-    content: "\A" ;
-    white-space: pre ;
-}
-
 .event_info {
     height:350px;
     width:450px;
@@ -48,34 +32,76 @@
     width:100%;
 }
 
-/* ▼タブ */
-#tabcontrol a {
-   display: inline-block;            /* インラインブロック化 */
-   border-width: 1px 1px 0px 1px;    /* 下以外の枠線を引く */
-   border-style: solid;              /* 枠線の種類：実線 */
-   border-color: black;              /* 枠線の色：黒色 */
-   border-radius: 0.75em 0.75em 0 0; /* 枠線の左上角と右上角だけを丸く */
-   padding: 0.75em 1em;              /* 内側の余白 */
-   text-decoration: none;            /* リンクの下線を消す */
-   color: black;                     /* 文字色：黒色 */
-   background-color: white;          /* 背景色：白色 */
-   font-weight: bold;                /* 太字 */
-   position: relative;               /* JavaScriptでz-indexを調整するために必要 */
+.features-table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-shadow: 0 1px 0 #fff;
+  color: #2a2a2a;
+  background: #fafafa;  
+  background-image: linear-gradient(top, #fff, #eaeaea, #fff);
 }
-/* ▼タブにマウスポインタが載った際(任意) */
-#tabcontrol a:hover {
-   text-decoration: underline;       /* 文字に下線を引く */
+
+.features-table td {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  border-bottom: 1px solid #cdcdcd;
+  box-shadow: 0 1px 0 white;
+  white-space: nowrap;
+  text-align: center;
 }
-/* ▼タブの中身 */
-#tabbody div {
-   border: 1px solid black; /* 枠線：黒色の実線を1pxの太さで引く */
-   margin-top: -1px;        /* 上側にあるタブと1pxだけ重ねるために「-1px」を指定 */
-   padding: 1em;            /* 内側の余白量 */
-   background-color: white; /* 背景色：白色 */
-   position: relative;      /* z-indexを調整するために必要 */
-   z-index: 0;              /* 重なり順序を「最も背面」にするため */
+
+/*Body*/
+.features-table tbody td {
+  text-align: center;
+  font: normal 12px Verdana, Arial, Helvetica;
+  width: 150px;
 }
-/* ▼タブの配色 */
-#tabcontrol a:nth-child(1), #tabbody div:nth-child(1) { background-color: #ffffdd; }/* 1つ目のタブとその中身用の配色 */
-#tabcontrol a:nth-child(2), #tabbody div:nth-child(2) { background-color: #ddffdd; }/* 2つ目のタブとその中身用の配色 */
-#tabcontrol a:nth-child(3), #tabbody div:nth-child(3) { background-color: #ddddff; }/* 3つ目のタブとその中身用の配色 */
+
+.features-table tbody td:first-child {
+  width: auto;
+  text-align: left;
+}
+
+.features-table td:nth-child(2), 
+.features-table td:nth-child(3) {
+  background: #efefef;
+  background: rgba(144,144,144,0.15);
+  border-right: 1px solid white;
+}
+
+
+.features-table td:nth-child(4) {
+  background: #e7f3d4;  
+  background: rgba(184,243,85,0.3);
+}
+
+/*Header*/
+.features-table thead td {
+  font: bold 1.3em 'trebuchet MS', 'Lucida Sans', Arial;  
+  border-radius-topright: 10px;
+  border-radius-topleft: 10px; 
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top: 1px solid #eaeaea; 
+}
+
+.features-table thead td:first-child {
+  border-top: none;
+}
+
+/*Footer*/
+.features-table tfoot td {
+  font: bold 1.4em Georgia;  
+  border-radius-bottomright: 10px;
+  border-radius-bottomleft: 10px; 
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom: 1px solid #dadada;
+}
+
+.features-table tfoot td:first-child {
+  border-bottom: none;
+}
