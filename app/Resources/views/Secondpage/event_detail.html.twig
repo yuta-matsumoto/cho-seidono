@@ -18,66 +18,168 @@
             <div class="event_info">
                 <div class="event_base_info">
                     <div class="event_name">
-                        <p>イベント名<span class="br">松本チーム飲み</span></p>
+                        <p>イベント名<span class="br">{{ eventList[0].eventTitle }}</span></p>
                     </div>
                     <div class="event_created_at">
-                        <p>作成日 2018/07/14 12:00</p>
+                        <p>作成日 {{ eventList[0].createAt|date('Y-m-t H:m') }}</p>
                         <button>削除</button>
                         <button>編集</button>
                     </div>
                 </div>
                 <div class="event_explain">
-                    <p>皆様お疲れ様です！今月もやりますよ！チーム飲み会！！皆様お疲れ様です！今月もやりますよ！チーム飲み会！！皆様お疲れ様です！今月もやりますよ！チーム飲み会！！</p>
+                    <p>{{ eventList[0].eventDetail }}</p>
                 </div>
                 <div class="event_answer_situation">
                     <p>回答状況 4名/4名回答済</p>
                     <p>必須参加者 松本</p>
                 </div>
             </div>
-            <table class="features-table">
-                <thead>
-                    <tr>
-                        <td>日時</td>
-                        <td>〇</td>
-                        <td>△</td>
-                        <td>×</td>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <td></td>
-                        <td>$99</td>
-                        <td>$199</td>
-                        <td>$399</td>
-                    </tr>
-                </tfoot>          
-                <tbody>
-                    <tr>
-                        <td>2018/08/04 土 19:00～</td>
-                        <td><img src="check.png" width="16" height="16" alt="check"></td>
-                        <td><img src="check.png" width="16" height="16" alt="check"></td>
-                        <td><img src="check.png" width="16" height="16" alt="check"></td>     
-                    </tr>
-                    <tr>
-                        <td>2018/08/05 日 19:00～</td>
-                        <td><img src="check.png" width="16" height="16" alt="check"></td>
-                        <td><img src="check.png" width="16" height="16" alt="check"></td>
-                        <td><img src="check.png" width="16" height="16" alt="check"></td>     
-                    </tr>
-                    <tr>
-                        <td>2018/08/06 月 19:00～</td>
-                        <td><img src="cross.png" width="16" height="16" alt="cross"></td>
-                        <td><img src="check.png" width="16" height="16" alt="check"></td>
-                        <td><img src="check.png" width="16" height="16" alt="check"></td>
-                    </tr>
-                    <tr>
-                        <td>2018/08/07 火 19:00～</td>
-                        <td><img src="cross.png" width="16" height="16" alt="cross"></td>
-                        <td><img src="cross.png" width="16" height="16" alt="cross"></td>
-                        <td><img src="check.png" width="16" height="16" alt="check"></td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div class ="event_answer_samary">
+                <select name="display_type">
+                    <option value="1" selected>シンプル</option>
+                    <option value="2">〇△のみ</option>
+                    <option value="3">FULL</option>
+                </select>
+                <div class="simple">
+                    <table class="features-table">
+                        <thead>
+                            <tr>
+                                <td>日時</td>
+                                <td>〇</td>
+                                <td>△</td>
+                                <td>×</td>
+                            </tr>
+                        </thead>
+                        {#<tfoot>
+                            <tr>
+                                <td></td>
+                                <td>$99</td>
+                                <td>$199</td>
+                                <td>$399</td>
+                            </tr>
+                        </tfoot>#}          
+                        <tbody>
+                            <tr>
+                                <td>2018/08/04 土 19:00～</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>1</td>     
+                            </tr>
+                            <tr>
+                                <td>2018/08/05 日 19:00～</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>1</td>     
+                            </tr>
+                            <tr>
+                                <td>2018/08/06 月 19:00～</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>2018/08/07 火 19:00～</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="maru_sankaku_only">
+                    <table class="features-table">
+                        <thead>
+                            <tr>
+                                <td>日時</td>
+                                <td>〇</td>
+                                <td>△</td>
+                                <td>×</td>
+                            </tr>
+                        </thead>
+                        {#<tfoot>
+                            <tr>
+                                <td></td>
+                                <td>$99</td>
+                                <td>$199</td>
+                                <td>$399</td>
+                            </tr>
+                        </tfoot>#}          
+                        <tbody>
+                            <tr>
+                                <td>2018/08/04 土 19:00～</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>1</td>     
+                            </tr>
+                            <tr>
+                                <td>2018/08/05 日 19:00～</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>1</td>     
+                            </tr>
+                            <tr>
+                                <td>2018/08/06 月 19:00～</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>2018/08/07 火 19:00～</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="full">
+                    <table class="features-table">
+                        <thead>
+                            <tr>
+                                <td>日時</td>
+                                <td>〇</td>
+                                <td>△</td>
+                                <td>×</td>
+                            </tr>
+                        </thead>
+                        {#<tfoot>
+                            <tr>
+                                <td></td>
+                                <td>$99</td>
+                                <td>$199</td>
+                                <td>$399</td>
+                            </tr>
+                        </tfoot>#}          
+                        <tbody>
+                            <tr>
+                                <td>2018/08/04 土 19:00～</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>1</td>     
+                            </tr>
+                            <tr>
+                                <td>2018/08/05 日 19:00～</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>1</td>     
+                            </tr>
+                            <tr>
+                                <td>2018/08/06 月 19:00～</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>2018/08/07 火 19:00～</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </body>
 </html>

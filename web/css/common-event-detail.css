@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: #3DFD91;
 }
 .container{
     width: 450px;
@@ -30,6 +30,14 @@ body {
 .event_answer_situation {
     height:25%;
     width:100%;
+}
+
+.maru_sankaku_only {
+    display: none;
+}
+
+.full {
+    display: none;
 }
 
 .features-table {

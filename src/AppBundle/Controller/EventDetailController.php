@@ -13,9 +13,9 @@ class EventDetailController extends Controller
      */
         public function goToEventDetailAction(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('Secondpage/event_detail.html.twig', array(
-            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-        ));
+        $em = $this->getDoctrine()->getManager();
+        $eventDetailRepository = $em->getRepository('AppBundle:Event');
+        $eventList = $eventDetailRepository->findBy(['id'=> 2]);
+        return $this->render('Secondpage/event_detail.html.twig', ['eventList' => $eventList]);
     }
 }
