@@ -1,0 +1,204 @@
+h1{
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+.features-table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-shadow: 0 1px 0 #fff;
+    color: #2a2a2a;
+    background: #fafafa;  
+    background-image: linear-gradient(top, #fff, #eaeaea, #fff);
+}
+
+.features-table td {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    border-bottom: 1px solid #cdcdcd;
+    box-shadow: 0 1px 0 white;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/*Body*/
+.features-table tbody td {
+    text-align: center;
+    font: normal 12px Verdana, Arial, Helvetica;
+    width: 150px;
+}
+
+.features-table tbody td:first-child {
+    width: auto;
+    text-align: left;
+}
+
+.features-table td:nth-child(2){
+    background: #ffdd63;
+    background: rgb(255, 221, 99);
+    border-right: 1px solid white;
+}
+
+.features-table td:nth-child(3) {
+    background: #ffdd63;
+    background: rgb(255, 221, 99);
+    border-right: 1px solid white;
+}
+
+.features-table td:nth-child(4) {
+    background: #ffdd63;  
+    background: rgb(255, 221, 99);
+}
+
+.features-table thead td:first-child {
+    border-top: none;
+}
+
+.features-table tfoot td:first-child {
+    border-bottom: none;
+}
+.even {
+    background: #fbf8f0;
+}
+.odd {
+    background: #fefcf9;
+}
+
+.btn1{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: rgb(12, 127, 249);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background: #ccff33;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.08);
+}
+.btn1.fa {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    line-height: 10px;
+    vertical-align: middle; 
+    left: 10px;
+    top: 9px;
+    border-radius: 50%;
+    font-size: 50px;
+    background-image: -webkit-linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+    background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #b5b5b5;
+}
+
+.btn1.fa:active{
+    background-image: -webkit-linear-gradient(#efefef 0%, #303ca3 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #d8d8d8;
+}
+
+.respondent {
+    text-align: center;
+}
+
+.remark {
+    margin:0px auto;
+    width: 669px; 
+    height: 60px;
+}
+
+.button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background:#fff;
+    border:1px #333 solid;
+    font-size:14px;
+    color:#ccc;
+}
+a {
+    font-size:28px;
+    color:#333;
+    text-decoration:none;
+}
+.close {
+    text-align:right;
+    padding: 10px;
+}
+p {
+    padding: 20px;
+    line-height:1.6;
+}
+video {
+    width:100%;
+    height:auto;
+}
+
+body {
+    background: linear-gradient(-90deg, #B3D12E, #2ED1B9); 
+    font-family:'Avenir','Helvetica, Neue','Helvetica','Arial';
+}
+
+* {
+  box-sizing: border-box;
+}
+/* モーダルCSS */
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10; /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30,30,30,0.9);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 70%;
+  max-width: 500px;
+  padding: 10px 30px;
+  background-color: #fff;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+
+/* 以下ボタンスタイル */
+button {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #282828;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#openModal {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}

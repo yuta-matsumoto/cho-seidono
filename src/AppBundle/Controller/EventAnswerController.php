@@ -9,12 +9,12 @@ use Symfony\Component\HttpFoundation\Request;
 class EventAnswerController extends Controller
 {
     /**
-     * @Route("/anserEvent/")
+     * @Route("/answerEvent/")
      */
         public function goToAnswerEventAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('Secondpage/eventanswer.html.twig', array(
+        return $this->render('Secondpage/EventAnswer.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ));
     }

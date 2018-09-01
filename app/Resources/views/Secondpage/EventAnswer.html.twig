@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}イベント回答画面{% endblock %}</title>
+
+        {% block stylesheets %}
+            <link rel ="stylesheet" href = "{{ asset("css/common-event-answer.css") }}"  />
+        {% endblock %}
+
+        {% block javascript %}
+
+            <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="{{ asset("js/common-event-answer.js") }}" ></script>
+        {% endblock %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body>
+
+        <div>
+            <h4></h4>
+
+        </div>
+        <div class="respondent">
+            回答者:<input type="text">
+        </div>
+
+        <br><br>
+
+        <table class="features-table">
+            <thead>
+                <tr>
+                    <td>日時</td>
+                    <td>参加可能</td>
+                    <td>参加微妙</td>
+                    <td>参加不可</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>2018/8/1 19:00</td>
+                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>  
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <br><br>
+
+
+        <div class="remark">
+            <h4>備考</h4>
+            <textarea style="width: 669px; height: 60px;"></textarea>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <button id="openModal">Open modal</button>
+
+
+        <!-- モーダルエリアここから -->
+        <section id="modalArea" class="modalArea">
+            <div id="modalBg" class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <h1>確認内容</h1>
+                            <table class="features-table">
+            <thead>
+                <tr>
+                    <td>日時</td>
+                    <td>参加可能</td>
+                    <td>参加微妙</td>
+                    <td>参加不可</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>2018/8/1 19:00</td>
+                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>  
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
+                </tr>
+            </tbody>
+        </table>
+
+                </div>
+                <div id="closeModal" class="closeModal">
+                    ×
+                </div>
+            </div>
+
+    </body>
+</html>
