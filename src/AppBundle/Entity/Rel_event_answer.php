@@ -38,7 +38,7 @@ class Rel_event_answer
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="target_date", type="date")
+     * @ORM\Column(name="target_date", type="datetime")
      */
     private $targetDate;
 

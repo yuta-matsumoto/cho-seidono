@@ -12,11 +12,28 @@
             <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script src="{{ asset("js/common-event-answer.js") }}" ></script>
         {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/武士のフリーアイコン.jpeg') }}" />
 
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
 
     <body>
+
+        <header>
+            <div class="iright">
+                <img src="{{ asset('img/武士のフリーアイコン.jpeg') }}" class="logo">
+            </div>
+            <div class="mleft">
+                <div class="midashi">調整殿</div>
+                <div class="word1">
+                    <div class="word2"><a href="{{path("app_default_index")}}" class="seni">TOP</a></div>
+                    <div class="word2"><a href="{{path("app_eventlist_gotoeventlist")}}" class="seni">イベント一覧</a></div>
+                    <div class="word2"><a href="{{path("app_createevent_gotocreateevent")}}" class="seni">イベント作成</a></div>
+                    <div class="word2"><a href="{{path("app_eventdetail_gotoeventdetail")}}" class="seni">イベント詳細</a></div>
+                    <div class="word2"><a href="{{path("app_eventanswer_gotoanswerevent")}}" class="seni">イベント回答</a></div>
+                </div>
+            </div>
+        </header>
+
 
         <div>
             <h4></h4>
@@ -72,15 +89,17 @@
 
 
         <div class="remark">
-            <h4>備考</h4>
+            <div class="word3">備考</div>
             <textarea style="width: 669px; height: 60px;"></textarea>
         </div>
-        <br>
-        <br>
-        <br>
-
+        <div class="ensyutu">
         <button id="openModal">Open modal</button>
-
+        </div>
+        
+                    <div class="link">
+                <a href="{{path("app_default_index")}}">戻る</a>
+                <br>
+            </div>
 
         <!-- モーダルエリアここから -->
         <section id="modalArea" class="modalArea">
@@ -88,48 +107,49 @@
             <div class="modalWrapper">
                 <div class="modalContents">
                     <h1>確認内容</h1>
-                            <table class="features-table">
-            <thead>
-                <tr>
-                    <td>日時</td>
-                    <td>参加可能</td>
-                    <td>参加微妙</td>
-                    <td>参加不可</td>
-                </tr>
-            </thead>
+                    <table class="features-table">
+                        <thead>
+                            <tr>
+                                <td>日時</td>
+                                <td>参加可能</td>
+                                <td>参加微妙</td>
+                                <td>参加不可</td>
+                            </tr>
+                        </thead>
 
-            <tbody>
-                <tr>
-                    <td>2018/8/1 19:00</td>
-                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
-                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
-                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
-                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
-                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>  
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
-                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
-                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
-                    <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
-                    <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
-                </tr>
-            </tbody>
-        </table>
+                        <tbody>
+                            <tr>
+                                <td>2018/8/1 19:00</td>
+                                <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                                <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                                <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                                <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                                <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>  
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                                <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                                <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="#" class="btn1"><i class="far fa-circle">〇</i></a></td>
+                                <td><a href="#" class="btn1"><i class="far fa-triangle">△</i></a></td>
+                                <td><a href="#" class="btn1"><i class="fal fa-times">×</i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 </div>
                 <div id="closeModal" class="closeModal">
                     ×
                 </div>
             </div>
+
     </body>
 </html>
