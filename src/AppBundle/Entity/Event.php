@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Event
@@ -69,7 +70,23 @@ class Event
      * @ORM\Column(name="update_at", type="datetime", nullable=true)
      */
     private $updateAt;
+    
+    /** 
+     * @var User $user 
+     * @ORM\OneToOne(targetEntity="User", mappedBy="event") 
+     */ 
+    private $user;
+    
+    /** 
+     * @var RelEventAnswer $relEventAnswer 
+     * @ORM\OneToMany(targetEntity="Rel_event_answer", mappedBy="event") 
+     */ 
+    private $relEventAnswer;
 
+    public function __construct()
+    {
+        $this->relEventAnswer = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -248,5 +265,54 @@ class Event
     {
         return $this->updateAt;
     }
+    
+     /**
+     * Set User
+     *
+     * @param User $user
+     *
+     * @return User
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get User
+     *
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+    
+     /**
+     * Set RelEventAnswer
+     *
+     * @param RelEventAnswer $relEventAnswer
+     *
+     * @return RelEventAnswer
+     */
+    public function setRelEventAnswer($relEventAnswer)
+    {
+        $this->relEventAnswer = $relEventAnswer;
+
+        return $this;
+    }
+
+    /**
+     * Get RelEventAnswer
+     *
+     * @return RelEventAnswer
+     */
+    public function getRelEventAnswer()
+    {
+        return $this->relEventAnswer;
+    }
+    
 }
 

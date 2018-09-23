@@ -38,7 +38,7 @@ class Rel_event_answer
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="target_date", type="datetime")
+     * @ORM\Column(name="target_date", type="date")
      */
     private $targetDate;
 
@@ -55,6 +55,14 @@ class Rel_event_answer
      * @ORM\Column(name="create_at", type="datetime")
      */
     private $createAt;
+    
+    /** 
+     * @var Event $event 
+     * @ORM\ManyToOne(targetEntity="Event", inversedBy="relEventAnswer") 
+     * @ORM\JoinColumn(name="event_id", referencedColumnName="id", nullable=false) 
+     *  
+     */ 
+    private $event;
 
 
     /**
@@ -185,6 +193,30 @@ class Rel_event_answer
     public function getCreateAt()
     {
         return $this->createAt;
+    }
+    
+     /**
+     * Set Event
+     *
+     * @param Event $event
+     *
+     * @return Event
+     */
+    public function setEvent($event)
+    {
+        $this->event = $event;
+
+        return $this;
+    }
+
+    /**
+     * Get Event
+     *
+     * @return Event
+     */
+    public function getEvent()
+    {
+        return $this->event;
     }
 }
 
