@@ -83,6 +83,14 @@ class User
      * @ORM\Column(name="update_at", type="datetime", nullable=true)
      */
     private $updateAt;
+    
+    /** 
+     * @var Event $event 
+     * @ORM\OneToOne(targetEntity="Event", inversedBy="user") 
+     * @ORM\JoinColumn(name="id", referencedColumnName="user_id", nullable=false) 
+     *  
+     */ 
+    private $event;
 
 
     /**
@@ -309,6 +317,30 @@ class User
     public function getUpdateAt()
     {
         return $this->updateAt;
+    }
+    
+     /**
+     * Set Event
+     *
+     * @param Event $event
+     *
+     * @return Event
+     */
+    public function setEvent($event)
+    {
+        $this->event = $event;
+
+        return $this;
+    }
+
+    /**
+     * Get Event
+     *
+     * @return Event
+     */
+    public function getEvent()
+    {
+        return $this->event;
     }
 }
 
