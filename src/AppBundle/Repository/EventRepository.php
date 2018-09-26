@@ -16,7 +16,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
     public function findByEventList()
     {
         $query = $this->createQueryBuilder('e')
-                ->select('e.eventTitle, e.createAt')
+                ->select('e.eventTitle, e.createAt, r.eventId')
                 ->addSelect('(count(r.id)) AS answer')
                 ->leftJoin('AppBundle:Rel_event_answer','r','WITH','e.id = r.eventId')
                 ->groupBy('e.id')
