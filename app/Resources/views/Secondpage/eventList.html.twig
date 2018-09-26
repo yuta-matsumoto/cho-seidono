@@ -11,6 +11,7 @@
     </head>
 
 <body>
+{{ include("Common/header.html.twig") }}
 <div>   
         {#イベント一覧全て#}
         <div class="main">
@@ -27,22 +28,18 @@
                     <thead>
                         <tr>
                             <th>イベント名</th>
-                            <th>○</th>
-                            <th>△</th>
-                            <th>×</th>
-                            <th>未</th>
+                            <th>回答済み</th>
+                            <th>未回答</th>
                             <th>作成日</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for event in eventList %}
                         <tr>
-                            <td>{{event.name}}</td>
-                            <td>{{event.circle}}</td>
-                            <td>{{event.triangle}}</td>
-                            <td>{{event.cross}}</td>
-                            <td>{{event.un}}</td>
-                            <td>{{event.createDate}}</td>
+                            <td>{{event.eventTitle}}</td>
+                            <td>{{event.answer}}</td>
+                            <td>{{4 - event.answer}}</td>
+                            <td>{{event.createAt|date('Y年m月d日 H:i:s')}}</td>
                         </tr>
                         {% endfor %}
                     </tbody>

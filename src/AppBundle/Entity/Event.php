@@ -82,6 +82,11 @@ class Event
      * @ORM\OneToMany(targetEntity="Rel_event_answer", mappedBy="event") 
      */ 
     private $relEventAnswer;
+    
+    /** 
+     * 回答カウンター用
+     */
+    private $answer;
 
     public function __construct()
     {
@@ -314,5 +319,16 @@ class Event
         return $this->relEventAnswer;
     }
     
+    public function setAnswer($answer)
+    {
+        $this->answer = $answer;
+        
+        return $this;
+    }
+    
+    public function getAnswer()
+    {
+        return $this->answer;
+    }
 }
 

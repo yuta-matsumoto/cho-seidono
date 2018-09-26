@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}イベント回答画面{% endblock %}</title>
+
+        {% block stylesheets %}
+            <link rel ="stylesheet" href = "{{ asset("css/common-header.css") }}"  />
+        {% endblock %}
+        
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/武士のフリーアイコン.jpeg') }}" />
+    <body>
+        <header>
+        <div class="iright">
+            <img src="{{ asset('img/武士のフリーアイコン.jpeg') }}" class="logo">
+        </div>
+        <div class="mleft">
+            <div class="midashi">調整殿</div>
+            <div class="word1">
+                <div class="word2"><a href="{{path("app_default_index")}}" class="seni">TOP</a></div>
+                <div class="word2"><a href="{{path("app_eventlist_gotoeventlist")}}" class="seni">イベント一覧</a></div>
+                <div class="word2"><a href="{{path("app_createevent_gotocreateevent")}}" class="seni">イベント作成</a></div>
+                <div class="word2"><a href="{{path("app_eventdetail_gotoeventdetail")}}" class="seni">イベント詳細</a></div>
+                <div class="word2"><a href="{{path("app_eventanswer_gotoanswerevent")}}" class="seni">イベント回答</a></div>
+            </div>
+        </div>
+        </header>
+    </body>
+</html>
